@@ -1,1 +1,4 @@
-/* Your style rules here */
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+h1{
+    font-family: 'Playball', cursive;
+}
