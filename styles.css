@@ -6,10 +6,31 @@
 body {
     margin: 0px;
     font-family: Georgia, sans-serif;
+    background-color: blanchedalmond;
+}
+
+header{
+    background-color: black;
+    color: white;
+    padding: 40px;
+    text-align: center;
 }
 
 p, a, li {
     line-height: 1.5em;
     font-size: 1.1em;
     color: green;
+}
+
+section{
+    border: solid 1px;
+    display: inline-table;
+    margin: 100px;
+    padding: 40px;
+    height: 400px;
+    width: 600px;
+}
+
+section > h2{
+   text-align: center;
 }
