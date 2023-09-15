@@ -6,32 +6,55 @@
 body {
     margin: 0px;
     font-family: Georgia, sans-serif;
-    background-color: blanchedalmond;
+    background-color: lightslategrey;
 }
 
 header{
     background-color: black;
     color: white;
-    padding: 40px;
+    padding: 60px 15vw;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin: 0px;
+    padding: 40px 0px;
+    font-family: Georgia, cursive;
+    font-size: 3em;
+}
+
+p{
+    text-align: center;
+    font-size: 1.25em;
+}
+
+h2 {
+    font-family: georgia, cursive;
+    font-size: 1.8em;
+    margin-bottom: 10px;
     text-align: center;
 }
 
-
-p, a, li {
-    line-height: 1.5em;
-    font-size: 1.1em;
-    color: green;
+.my-stuff {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+    row-gap: 100px;
 }
 
-section{
-    border: solid 1px;
-    display: inline-table;
-    margin: 100px;
-    padding: 40px;
-    height: 400px;
-    width: 600px;
+.my-stuff > section {
+    margin: 0vh 0; 
+    background-color:lightgrey;
+    padding: 15px;
+    border-radius: 5px;
+}
+.my-stuff h2 {
+    margin-bottom: 20px;
 }
 
-section > h2{
-   text-align: center;
+main, header > div {
+    max-width: 1000px;
+    margin-right: 400px;
+    margin-left: 400px;
 }
