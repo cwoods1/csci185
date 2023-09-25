@@ -64,7 +64,7 @@ background-color: #EEEEEE;
 }
 
 #card1 > img, #card3 > img, #card5 > img {
-    border-radius: 360px;
+    border-radius: 200px;
 }
 
 main > p, footer > p {
