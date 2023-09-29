@@ -6,21 +6,25 @@
 body {
     margin: 0px;
     font-family: Georgia, sans-serif;
-    background-color: lightslategrey;
+    background-color: #e4d6a1;
     margin-bottom: 50px;
 }
 
-header{
+header {
     background-color: black;
-    color: white;
-    padding: 60px 15vw;
+    padding: 10px 10vh;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    .intro {align-self: center;
+        justify-self:center;}
+    color: #e4d6a1;
 }
 
 header h1 {
     margin: 0px;
-    padding: 40px 0px;
+    padding: 10px 0px;
     font-family: Georgia, cursive;
     font-size: 3em;
 }
@@ -32,21 +36,22 @@ p{
 
 h2 {
     font-family: georgia, cursive;
-    font-size: 1.8em;
+    font-size: 1.9em;
     margin-bottom: 10px;
     text-align: center;
+    color: #e4d6a1;
 }
 
 .my-stuff {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 100px;
-    row-gap: 100px;
+    column-gap: 70px;
+    row-gap: 70px;
 }
 
 .my-stuff > section {
     margin: 0vh 0; 
-    background-color:lightgrey;
+    background-color: black;
     padding: 15px;
     border-radius: 5px;
 }
@@ -58,4 +63,13 @@ main, header > div {
     max-width: 1000px;
     margin-right: 400px;
     margin-left: 400px;
+}
+
+li > a {
+    color: #e4d6a1;
+    text-decoration: none;
+}
+
+#logo {
+    max-width: 15%;
 }
