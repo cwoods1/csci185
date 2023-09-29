@@ -15,11 +15,12 @@ header {
     padding: 10px 10vh;
     text-align: center;
     margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 15% auto;
+    /* justify-content: space-between; */
+    color: #e4d6a1;
     .intro {align-self: center;
         justify-self:center;}
-    color: #e4d6a1;
 }
 
 header h1 {
@@ -71,5 +72,5 @@ li > a {
 }
 
 #logo {
-    max-width: 15%;
+    max-width: 100%;
 }
