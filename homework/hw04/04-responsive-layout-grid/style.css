@@ -110,25 +110,29 @@ body {
 @media (max-width: 720px) {
     .container {
         display: grid;
-        grid-template-columns: 100%;
+        grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto auto auto;
         row-gap: 20px;
     }
     
     .header {
         grid-row: 1/2;
+        grid-column: 1/2
     }
     
     .navigation {
         grid-row: 2/3;
+        grid-column: 1/2
     }
     
     .ads {
         grid-row: 5/6;
+        grid-column: 1/2
     }
     
     .sidebar {
         grid-row: 4/5;
+        grid-column: 1/2
     }
     
     .main {
