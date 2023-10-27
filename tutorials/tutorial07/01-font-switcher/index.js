@@ -1,10 +1,20 @@
+let sizeH1 = 40;
+let sizeP = 20;
+
+
 function makeBigger() {
-   alert('make bigger!');
-};
+   sizeH1 = sizeH1 + 5;
+   sizeP = sizeP + 5;
+   document.querySelector('.content').style.fontSize = sizeP + "px";
+   document.querySelector('h1').style.fontSize = sizeH1 + "px";
+}
 
 function makeSmaller() {
-   alert('make smaller!');
-};
+   sizeH1 = sizeH1 - 5;
+   sizeP = sizeP - 5;
+   document.querySelector('.content').style.fontSize = sizeP + "px";
+   document.querySelector('h1').style.fontSize = sizeH1 + "px";
+}
 
 /*
 Tips:

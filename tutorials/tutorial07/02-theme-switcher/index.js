@@ -1,18 +1,32 @@
-function defaultTheme() {
-    // your code here.
+function switchems(cName) {
+    document.querySelector('body').className = cName;
 }
 
-function oceanTheme() {
-   // your code here.
-}
 
-function desertTheme() {
-   // your code here.
-}
 
-function highContrastTheme() {
-    // your code here.
-}
+// function defaultTheme() {
+//     // your code here.
+//     console.log('default')
+//     document.querySelector('body').className = "";
+// }
+
+// function oceanTheme() {
+//    // your code here.
+//    console.log('ocean')
+//    document.querySelector('body').className = "ocean";
+// }
+
+// function desertTheme() {
+//    // your code here.
+//    console.log('desert')
+//    document.querySelector('body').className = "desert";
+// }
+
+// function highContrastTheme() {
+//     // your code here.
+//     console.log('HC')
+//     document.querySelector('body').className = "high-contrast";
+// }
 
 /*
     Hints: 

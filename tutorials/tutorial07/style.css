@@ -116,3 +116,15 @@ h1 {
 .high-contrast button {
     color: black;
 }
+
+#bigger {
+    font-size: 35px;
+    /* font-weight: bold; */
+}
+
+.dyslexia-mode {
+    font-family: 'Helvetica', 'Times New Roman';
+    letter-spacing: 0.35ch;
+    word-spacing: 1.225ch;
+    font-variant-ligatures: none;
+}
