@@ -12,6 +12,6 @@ function showGreen() {
     document.querySelector('body').style.backgroundColor = "green";
 }
 
-function changeBackground() {
-    document.querySelector("body").style.backgroundColor = "color";
+function changeBackground(color) {
+    document.querySelector("body").style.backgroundColor = color;
 }

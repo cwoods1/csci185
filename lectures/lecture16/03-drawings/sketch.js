@@ -2,41 +2,34 @@ function setup() {
     const canvasWidth = window.innerWidth;
     const canvasHeight = window.innerHeight; 
     createCanvas(canvasWidth, canvasHeight);
-    background("pink");
+    background("black");
 
-    /* Use the drawing functions to draw a picture. Ideas:
-        * Draw an animal
-        * Draw a tree
-        * Draw a car
-        * Draw some abstract art
-    */
+    drawCreature(100, 100, 'red', 200);
+    drawCreature(250, 250, 'orange', 250);
+    drawCreature(400, 100, 'yellow', 75);
+    drawCreature(550, 250, 'green', 50);
+    drawCreature(900, 500, 'blue', 300);
 
-    // https://p5js.org/reference/#/p5/circle
-    fill("teal")
-    circle(550, 100, 100);
-
-    // https://p5js.org/reference/#/p5/rect
-    fill('hotpink')
-    rect(30, 20, 55, 55);
-
-    // add your drawing here:
-    // https://p5js.org/reference/#/p5/point
-    // point(110, 20);
-
-    // https://p5js.org/reference/#/p5/text
-    // text("Here is some text", 200, 40);
-
-    // https://p5js.org/reference/#/p5/ellipse
-    // fill('red');
-    // ellipse(100, 200, 60, 100);
-
-    // Other shapes...
-    // Polygon: https://p5js.org/reference/#/p5/beginShape
-    // Line: https://p5js.org/reference/#/p5/line
-    
-    // Curve: https://p5js.org/reference/#/p5/curve
+    //triangle(200, 200, 100, 300, 200, 400)
+    //triangle(300, 300, 200, 400, 400, 400)
+    //triangle(300, 500, 200, 400, 400, 400)
 
 
     // for debugging:
     drawGrid(canvasWidth, canvasHeight)
+}
+
+
+function drawCreature(x, y, color, size) {
+    fill(color);
+    //let size = 100;
+    let eyeball = size / 7.5;
+    circle(x, y, size); //base shape face
+    fill('white');
+    circle(x + eyeball, y - eyeball, 2 * eyeball); //left eye
+    circle(x - eyeball, y - eyeball, 2 * eyeball); //right eye
+    fill ('black')
+    circle(x + eyeball, y - eyeball, eyeball); //left eye
+    circle(x - eyeball, y - eyeball, eyeball); //right eye
+
 }
