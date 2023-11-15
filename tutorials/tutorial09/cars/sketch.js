@@ -6,9 +6,18 @@ const c1 = {
     x: 100,
     y: 100,
     width: 200,
-    speed: 0.2,
-    color: 'hotpink'
+    speed: 3,
+    color: '#D9BBF9'
 };
+
+const c2 = {
+    x: 100, 
+    y: 500, 
+    width: 200, 
+    speed: 8, 
+    color: '#E01A4F'
+
+}
 
 
 // required to set up the canvas:
@@ -23,13 +32,32 @@ function draw() {
     clear();
 
     // move the car:
-    c1.x += c1.speed;
+    // go and get the value of speed stored in the C1.speed variable 
+    // and add it to the c1.x variable
+    // 99% of the time, add 3 to the x position. 
+    // but, when the x position gets to the end of the screen, 
+    // set the x back to 0 
+
+    if (c1.x > canvasWidth) {
+        console.log
+        c1.x = 0; 
+    } else {
+        c1.x += c1.speed;
+    }
+
+    if (c2.x < 0) {
+        c2.x = canvasWidth; 
+    } else {
+        c2.x -= c2.speed; 
+    }
+    
 
     // redraw the car:
     drawCar(c1.x, c1.y, c1.width, c1.color);
+    drawCar(c2.x, c2.y, c2.width, c2.color); 
     
     // draw the grid (optional -- feel free to remove this line):
-    drawGrid(canvasWidth, canvasHeight);
+    //drawGrid(canvasWidth, canvasHeight);
 }
 
 

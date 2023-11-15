@@ -1,40 +1,69 @@
 const canvasWidth = window.innerWidth;
-const canvasHeight = window.innerHeight; 
-const colors = ["#08415c", "#e1f0c4", "#6bab90", "#55917f", "#5e4c5a"];
+const canvasHeight = window.innerHeight;
+const colors = ["#8447FF ", "#51E5FF", "#A30015", "#05F140", "#FFE74C"];
 
-function randomFloat(min, max) { 
-	// min and max included 
-	return Math.random() * (max - min) + min;
+function randomFloat(min, max) {
+    // min and max included 
+    return Math.random() * (max - min) + min;
 }
 
-function randomInt(min, max) { 
-	// min and max included 
-	return Math.floor(Math.random() * (max - min + 1)) + min;
+function randomInt(min, max) {
+    // min and max included 
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 function setup() {
     createCanvas(canvasWidth, canvasHeight);
-    // frameRate(2);
-    
-    fill("#08415c");
+    frameRate(10);
+    //     let counter = 0; //create a variable called counter and set it to 0 
+    //     while (counter < 500) { //is the counter <500, if so enter the block
+    //     const i = randomInt(0, 4); //give me a number between 0 and 4 
+    //     console.log("the index is:", i);
+    //     fill(colors[i]); //pretend the i is 3: 
 
-    // draw a random circle:
-    let x = randomInt(0, canvasWidth);
-    let y = randomInt(0, canvasHeight);
-    let size = randomFloat(25, 125);
-    circle(x, y, size);
-    
+    //     // draw a random circle:
+    //     let x = randomInt(0, canvasWidth); //pick a number between 0 and 1400? 
+    //     let y = randomInt(0, canvasHeight);
+    //     let size = randomFloat(12, 22); 
+    //     console.log(x, y, size); //create a circle with the given variable 
+    //     circle(x, y, size);
+    //     counter += 1; 
+
+    //     }
+
 }
 
 
-// // anything that you want to animate goes in this function:  
-// function draw() {
-//     clear();
+// // anything that you want to animate goes in this function: 
+let counter = 0;
+function draw() {
+    const i = randomInt(0, 4); //give me a number between 0 and 4 
+    console.log("the index is:", i);
+    fill(colors[i]); //pretend the i is 3: 
 
-// }
+    // draw a random circle:
+    let x = randomInt(0, canvasWidth); //pick a number between 0 and 1400? 
+    let y = randomInt(0, canvasHeight);
+    let size = randomFloat(12, 22);
+    console.log(x, y, size); //create a circle with the given variable 
+    //circle(x, y, size); 
+    //x = randomInt(0, canvasWidth); 
+    //y = randomInt(0, canvasHeight);
+    counter += 1;
+    let multiplier1 = randomInt(-1, 1);
+    let multiplier2 = randomInt(-1, 1);
+    if (counter % 3 == 0) {
+        square(x, y, size);
+    } else if (counter % 3 == 1) {
+        circle(x, y, size);
+    } else {
+        line(x, y, x + multiplier1 * size, y + multiplier2 * size)
+    }
+
+}
 
 
- 
+
 // // 1. draw a random square:
 // square(x, y, size);
 
@@ -49,4 +78,3 @@ function setup() {
 // let coefX = randomFloat(-3, 3);
 // let coefY = randomFloat(-3, 3);
 // line(x, y, x + size * coefX, y + size * coefY);
-

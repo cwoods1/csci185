@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.top-nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+.top-nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.artist-name {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    padding: 0px;
+    margin-right: 20px;
+}
+
+.social-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.social-nav a {
+    color: #fff;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.header {
+    height: 30vh;
+    background-color: #000;
+    position: relative;
+}
+
+/* Add styles for bouncing logos and flames here */
+
+.bio-section {
+    /* Add styles for the bio section */
+}
+
+.photo-video-carousel {
+    /* Add styles for the photo and video carousel */
+}
+

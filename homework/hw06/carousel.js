@@ -18,14 +18,12 @@ let idx = 0;
     (2) update the caption inside of the .caption paragraph
 */
 function showImage() {
-    while (idx < photos.length){
-        let template = `
-            <div class="current-photo" style="background-image:url('${ photos[idx]}')"></div>
-        `;
-        document.querySelector('.current-photo').insertAdjacentHTML('beforeend', template);
-        // <p>${people[counter].name} scored ${people[counter].score}</p>
     console.log('Show image');
-}}
+    console.log(idx);
+    document.querySelector('.current-photo').innerHTML=`<img src='${photos[idx]}'/>`;
+    document.querySelector('.caption').innerHTML=`<p> Image ${idx+1} of 10 </p>`;
+    
+}
 
 
 /* This function should set the idx variable 
@@ -35,15 +33,14 @@ function showImage() {
    the array, set idx to 0.
 */
 function forward() {
-    while (idx < photos.length){
-        let template = `
-            <div class="current-photo" style="background-image:url('${photos[idx]}')"></div>
-        `;
-        document.querySelector('.current-photo').insertAdjacentHTML('beforeend', template);
-        idx += 1;
-        // <p>${people[counter].name} scored ${people[counter].score}</p>
-    console.log('forward');
-}}
+    console.log(idx);
+    if(idx==photos.length-1){
+        idx=0;
+    } else{
+        idx +=1;
+    }
+    showImage(); 
+}
 
 
 /* This function should set the idx variable 
@@ -53,5 +50,15 @@ function forward() {
    one less than the length of the array.
 */
 function back() {
-    console.log('back');
+    console.log(idx);
+
+    if(idx==0){
+        console.log('end of the line. setting idx back to zero')
+        idx= photos.length-1;
+    } else{
+        idx -=1;
+    }
+
+    showImage(); 
+    
 }
