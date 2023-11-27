@@ -4,18 +4,18 @@ const canvasHeight = window.innerHeight;
 // feel free to change these values as you like!
 const c1 = {
     x: 100,
-    y: 100,
+    y: 200,
     width: 200,
-    speed: 3,
-    color: '#D9BBF9'
+    speed: 5,
+    color: 'green'
 };
 
 const c2 = {
     x: 100, 
-    y: 500, 
+    y: 700, 
     width: 200, 
-    speed: 8, 
-    color: '#E01A4F'
+    speed: 10, 
+    color: 'blue'
 
 }
 
@@ -63,8 +63,8 @@ function draw() {
 
 // this function's job is to draw a car based on the 
 // parameters the user passes in (x, y, size, fillColor, and wheelColor)
-function drawCar(x, y, size, fillColor, wheelColor='black') {
-    strokeWeight(0);
+function drawCar(x, y, size, fillColor, wheelColor='white') {
+    strokeWeight(1);
     
     // body
     fill(fillColor);

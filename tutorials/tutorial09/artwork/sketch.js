@@ -1,6 +1,6 @@
 const canvasWidth = window.innerWidth;
 const canvasHeight = window.innerHeight;
-const colors = ["#8447FF ", "#51E5FF", "#A30015", "#05F140", "#FFE74C"];
+const colors = ["blue ", "red", "green", "yellow", "orange", "purple", "hotpink"];
 
 function randomFloat(min, max) {
     // min and max included 
@@ -14,7 +14,7 @@ function randomInt(min, max) {
 
 function setup() {
     createCanvas(canvasWidth, canvasHeight);
-    frameRate(10);
+    frameRate(20);
     //     let counter = 0; //create a variable called counter and set it to 0 
     //     while (counter < 500) { //is the counter <500, if so enter the block
     //     const i = randomInt(0, 4); //give me a number between 0 and 4 
@@ -52,9 +52,9 @@ function draw() {
     counter += 1;
     let multiplier1 = randomInt(-1, 1);
     let multiplier2 = randomInt(-1, 1);
-    if (counter % 3 == 0) {
+    if (counter % 5 == 0) {
         square(x, y, size);
-    } else if (counter % 3 == 1) {
+    } else if (counter % 5 == 1) {
         circle(x, y, size);
     } else {
         line(x, y, x + multiplier1 * size, y + multiplier2 * size)
