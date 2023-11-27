@@ -201,6 +201,7 @@ input, select, textarea {
     grid-template-rows: 70vh 20vh 10vh;
     flex-direction: column;
     align-items: center;
+	justify-content: center;
 }
 
 .slide iframe {
