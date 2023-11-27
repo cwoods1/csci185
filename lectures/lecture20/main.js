@@ -1,8 +1,8 @@
 // ignore this function for now. We'll go over it
-// on Wednesday: 
+// on Wednesday:
 async function fetchCourses() {
     const url = `https://meteor.unca.edu/registrar/class-schedules/api/v1/courses/2024/spring/`;
-    data = await fetch(url).then(response => response.json());
+    data = await fetch(url).then((response) => response.json());
 }
 fetchCourses();
 
@@ -23,25 +23,36 @@ fetchCourses();
             * Only view classes that meet on Tuesdays and Thursdays? 
 */
 
-
 function search() {
-    const i = 516;
-    // console.log(data);
-    // console.log(data[0].Title);
-    // console.log(data[0].Instructors[0].Name);
-    
+    // 1. clear the results panel:
+    document.querySelector(".courses").innerHTML = "";
+
     for (let i = 0; i < data.length; i++) {
-        document.querySelector(".courses").innerHTML += `<section class="course">
-    <h2>${data[i].Code}: ${data[i].Title}</h2>
-    <p>
-    ${data[i].Days} &bull; ${data[i].Location.FullLocation} &bull; ${data[i].Hours} credit hour(s)
-    </p>
-    <p><strong>TBD</strong></p>
-    </section>
-    `;
+        // 2. create an HTML snippet that represents the course:
+        let instructor = "TBD";
+        if (data[i].Instructors.length > 0) {
+            instructor = data[i].Instructors[0].Name;
+        }
+        const htmlSnippet = `
+            <section class="course">
+                <h2>${data[i].Code}: ${data[i].Title}</h2>
+                <p>
+                    ${data[i].Days} &bull; 
+                    ${data[i].Location.FullLocation} &bull; 
+                    ${data[i].Hours} credit hour(s)
+                </p>
+                <p><strong>${instructor}</strong></p>
+            </section>
+        `;
+        // 3. append the HTML snippet to the element with a class of "courses":
+        // New rule: only add if the course matches the search term:
+        let searchTerm = document.querySelector("#search_term").value;
+        searchTerm = searchTerm.toLowerCase().trim();
+
+        if (data[i].Department === searchTerm) {
+            document.querySelector(".courses").insertAdjacentHTML("beforeend", htmlSnippet);
+        }
     }
     console.log(data);
-    const searchTerm = document.querySelector('#search_term').value;
 }
-
 
