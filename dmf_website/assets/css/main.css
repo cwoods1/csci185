@@ -96,7 +96,7 @@ input, select, textarea {
 
 .slide-arrow:hover,
 .slide-arrow:focus {
-    opacity: 1;
+    opacity: 0;
 }
 
 #slide-arrow-prev {
@@ -208,6 +208,7 @@ input, select, textarea {
     grid-template-rows: 70px 60vh 70px;
     flex-direction: column;
     align-items: center;
+	align-content: space-between;
 	justify-content: center;
 	justify-items: stretch;
 }
