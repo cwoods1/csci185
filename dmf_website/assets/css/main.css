@@ -1,4 +1,4 @@
-@import url(fontawesome-all.min.css);
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
 /*
@@ -111,11 +111,18 @@ input, select, textarea {
     border-radius: 2rem 0 0 2rem;
 }
 
-.slide {
+/* .slide {
     display: grid;
-    grid-template-rows: 70vh auto auto;
-    flex-direction: column;
+    grid-template-rows: 70px auto 70px;
+   	justify-content: center;
     align-items: center;
+	width: 100%;
+	height: 100%;
+} */
+
+.slide video, .slide img {
+	max-height: 100%;
+	max-width: 100%;
 }
 
 .slide img iframe {
@@ -198,13 +205,14 @@ input, select, textarea {
 
 .slide {
     display: grid;
-    grid-template-rows: 70vh 20vh 10vh;
+    grid-template-rows: 70px 60vh 70px;
     flex-direction: column;
     align-items: center;
 	justify-content: center;
+	justify-items: stretch;
 }
 
-.slide iframe {
+.slide iframe video {
     width: 100%;
     height: 100%;
 }
@@ -267,7 +275,7 @@ input, select, textarea {
 			}
 
 		}
-
+actions
 		@media screen and (max-width: 360px) {
 
 			html {
@@ -339,6 +347,7 @@ input, select, textarea {
 		font-size: 2.25rem;
 		line-height: 1.3;
 		letter-spacing: 0.5rem;
+		text-shadow: red;
 	}
 
 	h2 {
@@ -770,6 +779,7 @@ input, select, textarea {
 
 		.icon.brands:before {
 			font-family: 'Font Awesome 5 Brands';
+			font-size: 2rem;
 		}
 
 /* Image */
@@ -1051,18 +1061,18 @@ input, select, textarea {
 				border-radius: 100%;
 				box-shadow: inset 0 0 0 1px #ffffff;
 				display: inline-block;
-				height: 2.25rem;
-				line-height: 2.25rem;
+				height: 3rem;
+				line-height: 3rem;
 				text-align: center;
-				width: 2.25rem;
+				width: 3rem;
 			}
 
 				ul.icons li a:hover {
-					background-color: rgba(255, 255, 255, 0.075);
+					background-color: red;
 				}
 
 				ul.icons li a:active {
-					background-color: rgba(255, 255, 255, 0.175);
+					background-color: red;
 				}
 
 /* Table */

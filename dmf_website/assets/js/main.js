@@ -420,26 +420,41 @@ const slide = document.querySelector(".slide");
 const prevButton = document.getElementById("slide-arrow-prev");
 const nextButton = document.getElementById("slide-arrow-next");
 const totalSlides = document.querySelectorAll(".slide").length;
+let idx = 0;
+function showSlide () {
+	const slideWidth = slide.clientWidth;
+	slidesContainer.scrollLeft = idx * slideWidth;
+	playVideo();
+}
+
+function playVideo () {
+	const videos= document.querySelectorAll("video");
+	for (let i=0; i < videos.length; i++) {
+		videos[i].pause();
+	}
+
+	const slide = document.querySelectorAll(".slide")[idx];
+	const currentVideo=slide.querySelector("video");
+	if(currentVideo != null) {
+		currentVideo.play();
+	}
+}
 
 nextButton.addEventListener("click", () => {
-    const slideWidth = slide.clientWidth;
-    const maxScroll = slidesContainer.scrollWidth - slidesContainer.clientWidth;
+	idx += 1;
+	if (idx === totalSlides) {
+		idx = 0;
+	}
+	console.log(idx);
+	showSlide();
 
-    if (slidesContainer.scrollLeft + slideWidth >= maxScroll +1) {
-        // Reset to the first slide
-        slidesContainer.scrollLeft = 0;
-    } else {
-        slidesContainer.scrollLeft += slideWidth;
-    }
 });
 
 prevButton.addEventListener("click", () => {
-    const slideWidth = slide.clientWidth;
+	idx -= 1;
+	if (idx<= -1) {
+		idx = totalSlides -1;
+	}
+	showSlide();
 
-    if (slidesContainer.scrollLeft - slideWidth <= -1) {
-        // Reset to the last slide
-        slidesContainer.scrollLeft = slidesContainer.scrollWidth - slidesContainer.clientWidth;
-    } else {
-        slidesContainer.scrollLeft -= slideWidth;
-    }
 });
