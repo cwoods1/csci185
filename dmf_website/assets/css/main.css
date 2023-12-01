@@ -1807,3 +1807,98 @@ actions
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+		/**************************\
+  Basic Modal Styles
+\**************************/
+
+.modal {
+	font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+	z-index: 10000000 !important;
+}
+
+.modal__content {
+	height: 70vh;
+}
+
+.modal__content blockquote {
+	border-width: 0;
+}
+  
+  .modal__overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.6);
+	/* display: flex; */
+	justify-content: center;
+	align-items: center;
+	z-index: 10000000 !important;
+  }
+  
+  
+  .modal__btn:focus, .modal__btn:hover {
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
+  }
+  
+  .modal__btn-primary {
+	background-color: #00449e;
+	color: #fff;
+  }
+  
+  
+  
+  /**************************\
+	Demo Animation Style
+  \**************************/
+  @keyframes mmfadeIn {
+	  from { opacity: 0; }
+		to { opacity: 1; }
+  }
+  
+  @keyframes mmfadeOut {
+	  from { opacity: 1; }
+		to { opacity: 0; }
+  }
+  
+  @keyframes mmslideIn {
+	from { transform: translateY(15%); }
+	  to { transform: translateY(0); }
+  }
+  
+  @keyframes mmslideOut {
+	  from { transform: translateY(0); }
+	  to { transform: translateY(-10%); }
+  }
+  
+  .micromodal-slide {
+	display: none;
+  }
+  
+  .micromodal-slide.is-open {
+	display: block;
+  }
+  
+  .micromodal-slide[aria-hidden="false"] .modal__overlay {
+	animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+  }
+  
+  .micromodal-slide[aria-hidden="false"] .modal__container {
+	animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+  }
+  
+  .micromodal-slide[aria-hidden="true"] .modal__overlay {
+	animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+  }
+  
+  .micromodal-slide[aria-hidden="true"] .modal__container {
+	animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+  }
+  
+  .micromodal-slide .modal__container,
+  .micromodal-slide .modal__overlay {
+	will-change: transform;
+  }
