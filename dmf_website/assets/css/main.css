@@ -205,10 +205,10 @@ input, select, textarea {
 
 .slide {
     display: grid;
-    grid-template-rows: 70px 60vh 70px;
+    grid-template-rows: 7vh 70vh 7vh;
     flex-direction: column;
     align-items: center;
-	align-content: space-between;
+	align-content: space-evenly;
 	justify-content: center;
 	justify-items: stretch;
 }
@@ -1416,17 +1416,17 @@ actions
 			-ms-transition: opacity 0.325s ease-in-out;
 			transition: opacity 0.325s ease-in-out;
 			position: relative;
-			margin-top: 3.5rem;
+			margin-top: 1.5rem;
 		}
 
-			#header > *:before {
+			div.content:before {
 				content: '';
 				display: block;
 				position: absolute;
-				top: calc(-3.5rem - 1px);
+				top: calc(-1.5rem - 1px);
 				left: calc(50% - 1px);
 				width: 1px;
-				height: calc(3.5rem + 1px);
+				height: calc(1.5rem + 1px);
 				background: #ffffff;
 			}
 
@@ -1438,7 +1438,11 @@ actions
 				display: none;
 			}
 
-		#header .logo {
+		.logo > i {
+			font-size: 3.5rem;
+		}
+
+		#header .logo i {
 			width: 5.5rem;
 			height: 5.5rem;
 			line-height: 5.5rem;
@@ -1467,7 +1471,7 @@ actions
 				-webkit-transition-delay: 0.25s;
 				-ms-transition-delay: 0.25s;
 				transition-delay: 0.25s;
-				padding: 3rem 2rem;
+				padding: 2rem 2rem;
 				max-height: 100%;
 				overflow: hidden;
 			}
@@ -1819,6 +1823,7 @@ actions
 
 .modal__content {
 	height: 70vh;
+	width: 70vh;
 }
 
 .modal__content blockquote {
@@ -1832,7 +1837,7 @@ actions
 	right: 0;
 	bottom: 0;
 	background: rgba(0,0,0,0.6);
-	/* display: flex; */
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	z-index: 10000000 !important;
