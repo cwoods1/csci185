@@ -458,3 +458,68 @@ prevButton.addEventListener("click", () => {
 	showSlide();
 
 });
+
+
+// struct FullScreenPanelSimulation: View {
+//     @State var showNewScreen = false
+//     @State private var verticalPosition = 0.0
+    
+//     var body: some View {
+//         VStack {
+//             button
+//         }
+//         .fullScreenCover(isPresented: $showNewScreen) {
+//             fullScreenPanel
+//         }
+//     }
+    
+//     var button: some View {
+//         Button {
+//             showNewScreen.toggle()
+//         } label: {
+//             Text("Show full screen")
+//                 .padding(20)
+//                 .foregroundColor(.white)
+//                 .background(.purple)
+//                 .cornerRadius(8)
+//         }
+//     }
+    
+//     var fullScreenPanel: some View {
+//         ZStack(alignment: .top) {
+//             RoundedRectangle(cornerRadius: 20)
+//                 .fill(Gradient(colors: [.purple.opacity(0.9), .purple.opacity(0.1)]))
+//                 .ignoresSafeArea(.all)
+//             VStack {
+//                 Spacer()
+//                 Text("Slide me down to make me disappear...")
+//                     .font(.largeTitle)
+//                 Spacer()
+//             }
+            
+//         }
+//         .offset(y: verticalPosition)
+//         .gesture(
+//             gestureVertical()
+//         )
+//         .transition(.slide)
+//     }
+    
+//     func gestureVertical() -> some Gesture {
+//         return DragGesture()
+//             .onChanged { value in
+//                 if value.translation.height < 0 {
+//                     verticalPosition = 0
+//                 } else {
+//                     verticalPosition = value.translation.height
+//                 }
+                
+//             }
+//             .onEnded { value in
+//                 withAnimation(.linear(duration: 0.05)) {
+//                     showNewScreen.toggle()
+//                     verticalPosition = .zero
+//                 }
+//             }
+//     }
+// }

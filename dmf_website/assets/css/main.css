@@ -1423,10 +1423,10 @@ actions
 				content: '';
 				display: block;
 				position: absolute;
-				top: calc(-1.5rem - 1px);
+				top: calc(-2rem - 1px);
 				left: calc(50% - 1px);
 				width: 1px;
-				height: calc(1.5rem + 1px);
+				height: calc(2rem);
 				background: #ffffff;
 			}
 
@@ -1438,13 +1438,17 @@ actions
 				display: none;
 			}
 
-		.logo > i {
+		.logo > i img {
 			font-size: 3.5rem;
 		}
+		
+		.logo img {
+			
+		}
 
-		#header .logo i {
-			width: 5.5rem;
-			height: 5.5rem;
+		#header .logo i img {
+			width: 300px;
+			height: 300px;
 			line-height: 5.5rem;
 			border: solid 1px #ffffff;
 			border-radius: 100%;
