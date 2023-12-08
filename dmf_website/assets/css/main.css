@@ -1441,14 +1441,10 @@ actions
 		.logo > i img {
 			font-size: 3.5rem;
 		}
-		
-		.logo img {
-			
-		}
 
 		#header .logo i img {
-			width: 300px;
-			height: 300px;
+			width: 200px;
+			height: 200px;
 			line-height: 5.5rem;
 			border: solid 1px #ffffff;
 			border-radius: 100%;
@@ -1910,4 +1906,15 @@ actions
   .micromodal-slide .modal__container,
   .micromodal-slide .modal__overlay {
 	will-change: transform;
+  }
+
+  #tour {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+  }
+
+  #tour a {
+	font-size: 1.25em;
   }
