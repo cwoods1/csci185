@@ -1381,6 +1381,7 @@ actions
 				padding: 1rem;
 			}
 
+
 		}
 
 /* Header */
@@ -1616,6 +1617,12 @@ actions
 
 			#header {
 				padding: 1.5rem 0;
+				justify-content: center;
+			}
+			#header > *:before {
+				top: calc(-1.5rem - 3px);
+				height: calc(1rem + 9px);
+				justify-content: center;
 			}
 
 				#header .content .inner {
@@ -1649,6 +1656,14 @@ actions
 
 				#header nav.use-middle:after {
 					display: none;
+				}
+
+				#header .logo i img {
+					width: 75px;
+					height: 75px;
+					line-height: 2rem;
+					border: solid 1px #ffffff;
+					/* border-radius: 100%; */
 				}
 
 		}
